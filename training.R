@@ -1,28 +1,28 @@
+#First steps - declaring and creating variables
 c(2+2)
 
+EXAMPLE <- sort(c(18.8,100,31.7,72.3,68.8,60.5,55.5,44.5,45.7,68.4,93.4,2,78.1,62.4,68,74.6,97.3,68.6,88.8,80.4,70.8,28.9,67.4,89.7,48.7,54.2,52.7,68.1,84,40.1,62.5,58,11.2,88.2,69))
+
+#Simple mathematics vector functions
+arythmetic <- function(vector){
+  return(sum(vector)/length(vector))
+}
+
+Arythmetic_avg <- arythmetic(EXAMPLE)
+
+harmonic <- function(vector){
+  return(length(vector)/sum(replicate(length(vector),1)/vector))
+}
+
+Harmonic_avg <- harmonic(EXAMPLE)
+
+#Creating a histogram with graphic presentations of data.
 geometryczna <- function(vector){
   return(prod(vector)^(1/length(vector)))
 }
 
-GLIWICE <- sort(c(18.8,100,31.7,72.3,68.8,60.5,55.5,44.5,45.7,68.4,93.4,2,78.1,62.4,68,74.6,97.3,68.6,88.8,80.4,70.8,28.9,67.4,89.7,48.7,54.2,52.7,68.1,84,40.1,62.5,58,11.2,88.2,69))
-
-GLIWICE.GEOMETRYCZNA <- geometryczna(GLIWICE);
-hist(GLIWICE, breaks = c(0,30,50,70,90,101),right = FALSE, labels =c("NDST","DOP","DST","DB","BDB"))
+Geometric_avg <- geometryczna(EXAMPLE);
+hist(EXAMPLE, breaks = c(0,30,50,70,90,101),right = FALSE, labels =c("NDST","DOP","DST","DB","BDB"))
 
 
 
-harmoniczna <- function(vector){
-  return(length(vector)/sum(replicate(length(vector),1)/vector))
-}
-
-GLIWICE <- sort(c(18.8,100,31.7,72.3,68.8,60.5,55.5,44.5,45.7,68.4,93.4,2,78.1,62.4,68,74.6,97.3,68.6,88.8,80.4,70.8,28.9,67.4,89.7,48.7,54.2,52.7,68.1,84,40.1,62.5,58,11.2,88.2,69))
-
-GLIWICE.HARMONICZNA <- harmoniczna(GLIWICE)
-
-arytmetyczna <- function(vector){
-  return(sum(vector)/length(vector))
-}
-
-arytmetyczna(GLIWICE)
-mean(GLIWICE)
-hist(quantile(GLIWICE))
